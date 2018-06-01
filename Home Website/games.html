@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="Home Medai Server for Stodd's and Turv's Household.">
+    <meta name="author" content="Joel Stoddard-Turvey">
+	<link href="css/stylesheet.css" rel="stylesheet">
+	<link src="js/popcornjs.capture.js">
+	<link src="http://cdn.popcornjs.org/code/dist/popcorn.min.js">
+
+    <title>Home Media Server</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body onload="myFunction()">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="movies.html">Movies</a>
+                </li>
+                <li>
+                    <a href="music.html">Music</a>
+                </li>
+				<li>
+                    <a href="games.html">Games</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+				<img id="menu-button" src="images/menu-icon.png">
+			</a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Home Media Server</h1>
+                        <p>Game Library, so far this is a 500GB collection of games that I have built up, and more are to come!</p>
+						        <!-- Projects Row -->
+						<div class="row">
+							<div class="col-md-4 portfolio-item">
+								<a href="">
+									<img class="img-responsive" src="" alt="">
+								</a>
+								<h3>
+									<a href="">All games bulk download</a>
+								</h3>
+								<p>This is a huge file so please download only if you are sure.</p>
+							</div>
+							<div class="col-md-4 portfolio-item">
+								<a href="">
+									<img class="img-responsive" src="" t="">
+								</a>
+								<h3>
+									<a href="">Game 1</a>
+								</h3>
+								<p>test</p>
+							</div>
+							<div class="col-md-4 portfolio-item">
+								<a href="">
+									<img class="img-responsive" src="" alt="">
+								</a>
+								<h3>
+									<a href="">Game 2</a>
+								</h3>
+								<p>test</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+	
+	<!--Video Thumbnail Capture Test-->
+<script>
+		video.addEventListener('loadeddata', function() {
+		var duration = video.duration;
+		var i = 1;
+
+		var interval = setInterval(function() {
+			video.currentTime = i;
+			generateThumbnail(i);
+			i = i+5;
+			if (i > duration) clearInterval(interval);
+		}, 300);
+		});
+
+	function generateThumbnail(i) {     
+		//generate thumbnail URL data
+		var context = thecanvas.getContext('2d');
+		context.drawImage(video, 0, 0, 220, 150);
+		var dataURL = thecanvas.toDataURL();
+
+		//create img
+		img.setAttribute('films/test.mp4', dataURL);
+		var img = document.createElement('img');		
+	
+		//append img in container div
+		document.getElementById('video-test-container').appendChild(img);
+	}
+</script>
+
+</body>
+
+</html>
